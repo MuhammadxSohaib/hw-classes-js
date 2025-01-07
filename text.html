@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>JavaScript Class</h2>
+
+        <p>How to use a JavaScript Class.</p>
+        <p id="Game1"></p>
+        <p id="Game2"></p>
+        <script>
+            
+            class game {
+                constructor(name,year)
+                {this.name = name;
+                    this.year = year;
+                }
+            
+           
+            age(){
+                let date = new Date();
+                return date.getFullYear() - this.year;
+            }
+            }
+       
+        game1 = new game("Minecraft" , 2011);
+        document.getElementById("Game1").innerHTML = "The game is " + game1.name + " It was released in " + game1.year + " The game's age is " + game1.age();
+     
+    game2 = new game("Fortnite" , 2017);
+            document.getElementById("Game2").innerHTML = "The game is " + game2.name + " It was released in " + game2.year + " The game's age is " + game2.age();
+        </script>     
+
+<p id="details"></p>
+
+<script>
+class me {
+    constructor(person){this.myName  = person;}
+
+present() {return 'My name is' + this.myName ;}
+}
+
+    class model extends me{
+        constructor(person, mod) {super(person);
+            this.model = mod;
+
+        }
+        show() {
+            return this.present() + 'My cast is ' + this.model;
+        }
+    }
+let myName = new model("Sohaib", "Niazi");
+document.getElementById("details").innerHTML = myName.show();
+</script>
+</body>
+</html>
